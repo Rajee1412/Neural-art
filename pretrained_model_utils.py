@@ -97,7 +97,7 @@ def load_pretrained_VGG():
 
 def get_noise_image(content_image):
 
-    noise_image = np.random.uniform(0,255,(1,IMAGE_HEIGHT,IMAGE_WIDTH,CHANNELS)).astype('float32')
+    noise_image = np.random.uniform(-20,20,(1,IMAGE_HEIGHT,IMAGE_WIDTH,CHANNELS)).astype('float32')
 
     out_image =  noise_image*NOISE_RATIO + content_image*(1-NOISE_RATIO)
 
